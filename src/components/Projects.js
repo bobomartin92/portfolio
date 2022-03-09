@@ -38,7 +38,10 @@ const Projects = () => {
             <div className="projects">
                 {projectData ? projectData.slice(0, 6).map((project, index) => (
                         <Project key={index} project={project} />
-                )) : <div>Loading...</div> }
+                )) : <div class="bg-indigo-500">
+                        Loading...
+                        <svg class="animate-spin h-16 w-12 ml-4 ..." viewBox="0 0 24 24" />
+                    </div> }
             </div>
         </div>
         {projectData && projectData.length > 6 && <div className="load-more-btn">
