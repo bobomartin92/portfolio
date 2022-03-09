@@ -36,9 +36,9 @@ const Projects = () => {
         <div className="projects-container">
             <div className="projects-header">Projects</div>
             <div className="projects">
-                {projectData && projectData.slice(0, 6).map((project, index) => (
+                {projectData ? projectData.slice(0, 6).map((project, index) => (
                         <Project key={index} project={project} />
-                ))}
+                )) : <div>Loading...</div> }
             </div>
         </div>
         {projectData && projectData.length > 6 && <div className="load-more-btn">
