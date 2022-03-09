@@ -1,4 +1,5 @@
-import Project from '../components/Project'
+import { Link } from 'react-router-dom'
+import Project from './Project'
 import sanityClient from '../sanityClient'
 import { useEffect, useState } from 'react'
 
@@ -31,17 +32,19 @@ const Projects = () => {
         fetchData()
     }, [])
   return (
-      <main className='min-h-screen p-12'>
-            <section className="container mx-auto">
-                <h1 className="text-5xl flex justify-center cursive">Projects</h1>
-                <h2 className='text-lg text-gray-500 flex justify-center mb-12'>Welcome to my projects page!</h2>
-                <section className="projects">
-                    {projectData && projectData.map((project, index) => (
+    <section id='projects'>
+        <div className="projects-container">
+            <div className="projects-header">Projects</div>
+            <div className="projects">
+                {projectData && projectData.slice(0, 6).map((project, index) => (
                         <Project key={index} project={project} />
-                    ))}
-                </section>
-            </section>
-      </main>
+                ))}
+            </div>
+        </div>
+        {projectData && projectData.length > 6 && <div className="load-more-btn">
+                <button><Link to='/projects'>Load More</Link></button>
+        </div>}
+    </section>
   )
 }
 

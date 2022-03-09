@@ -6,7 +6,22 @@ module.exports = {
     './pages/**/*.{html,js}'
 ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        scaleBg: {
+          '0%' : { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        }
+      },
+      animation: {
+        scaleBg: 'scalebg 10s ease-in',
+      },
+      spacing: {
+        '10%': '10%',
+        '35%': '35%',
+        '0%' : '0'
+      }
+    },
   },
   plugins: [],
 }

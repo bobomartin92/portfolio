@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+.cursive {
+    font-family: 'Amatic SC', 'cursive';
+    font-weight: 700;
+}
+
+.hover-nav {
+    @apply hover:scale-125 transition ease-linear duration-300 hover:font-bold
+}
+
+.hover-nav-name {
+    @apply hover:text-green-800 transition ease-linear duration-300
+}
+
+.active-link {
+    @apply bg-red-700 text-red-100
+}
+
+.projects-container {
+    @apply w-full h-auto
+}
+
+.projects-header {
+    @apply flex justify-center m-5 items-center text-6xl cursive
+}
+
+.projects {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-2 justify-items-center
+}
+
+.project {
+    @apply w-80 h-80 rounded-xl shadow-lg overflow-hidden bg-gray-200 my-5
+}
+
+.project-title {
+    @apply cursive pl-5 text-2xl
+}
+
+.project-button-container {
+    @apply flex justify-evenly items-center px-10 py-3
+}
+
+.btn {
+    @apply text-xl font-semibold hover:scale-150 transition ease-linear duration-150 hover:font-bold
+}
+
+.load-more-btn {
+    @apply w-40 rounded bg-gray-200 flex justify-center m-auto my-8 p-2 text-xl font-semibold hover:scale-125 transition ease-linear duration-150 hover:font-bold
+}
+
+.social-icons {
+    @apply flex justify-center justify-items-center py-5 lg:bg-red-600 rounded-t-xl mb-12 lg:mb-0
+}
+
+.icon {
+    @apply bg-white rounded-full mx-5 hover:scale-125 transition ease-linear duration-200
+}
+
+.mobile-nav-link {
+    @apply text-4xl text-red-100
+}
+
+.mobile-nav {
+    @apply w-full bg-red-600 p-2 bottom-0% fixed z-10 opacity-90
+}
