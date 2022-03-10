@@ -38,9 +38,9 @@ const Projects = () => {
             <div className="projects">
                 {projectData ? projectData.slice(0, 6).map((project, index) => (
                         <Project key={index} project={project} />
-                )) : <div class="bg-indigo-500">
+                )) : <div type="button" class="bg-indigo-500 ..." disabled>
                         Loading...
-                        <svg class="animate-spin h-16 w-12 ml-4 ..." viewBox="0 0 24 24" />
+                        <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24" />
                     </div> }
             </div>
         </div>
